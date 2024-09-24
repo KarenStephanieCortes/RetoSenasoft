@@ -1,0 +1,6 @@
+Nueva base de datos 
+Plantilla: peniente 
+dev01= laura 
+dev02= karen 
+backend = dev01
+frontend = dev02
