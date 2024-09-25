@@ -5,7 +5,7 @@ USE dbSenaSoft;
 CREATE TABLE IF NOT EXISTS lab_group(
     id_lab_group INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    enabled BOOLEAN NOT NULL DEFAULT TRUE
+    description TEXT NOT NULL,
 ); 
 
 CREATE TABLE IF NOT EXISTS procedure_code(
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS lab_order(
     professional VARCHAR(50) NOT NULL,  
     orders INT NOT NULL,
     date_order DATE NOT NULL,
-    FOREIGN KEY (id_user) REFERENCES user(id_user), 
+    FOREIGN KEY (id_user) REFERENCES user(id_user)
 );
 
 CREATE TABLE IF NOT EXISTS lab_order_result(
