@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS lab_test(
     id_result_type INT NOT NULL,
     unit VARCHAR(20) NOT NULL,
     enabled BOOLEAN NOT NULL DEFAULT TRUE,
-    FOREIGN KEY (id_procedure_lab) REFERENCES lab_procedure(id_procedure_lab),
+    FOREIGN KEY (id_procedure_lab) REFERENCES lab_procedure(id_lab_procedure),
     FOREIGN KEY (id_result_type) REFERENCES category_option(id_category_option)
 );
 
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS lab_order_result(
     memo_result TEXT NOT NULL,
     num_processings INT NOT NULL,   
     FOREIGN KEY (id_order) REFERENCES lab_order(id_order_lab),
-    FOREIGN KEY (id_procedure) REFERENCES lab_procedure(id_procedure_lab),
+    FOREIGN KEY (id_procedure) REFERENCES lab_procedure(id_lab_procedure),
     FOREIGN KEY (id_test) REFERENCES lab_test(id_lab_test), 
-    FOREIGN KEY (id_option_test) REFERENCES options_test_lab(id_options_test_lab)
+    FOREIGN KEY (id_option_test) REFERENCES lab_options_test(id_options_test_lab)
 );
