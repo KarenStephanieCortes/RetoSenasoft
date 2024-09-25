@@ -11,13 +11,11 @@
           />
         </div>
         <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-          <h1 class="display-4 text-dark fw-bold">Bienvenido a LabResults!</h1>
-          <p>
+          <h1 class="display-5 text-dark fw-bold">Bienvenido a LabResults!</h1>
+          <p class="text-center">
             Bienvenido a nuestro portal. Aquí podrás consultar de manera fácil y
             rápida los resultados de tus exámenes médicos. Hemos diseñado este
-            espacio pensando en tu comodidad, asegurando una experiencia
-            sencilla y amigable para que puedas acceder a la información que
-            necesitas con total confianza.
+            espacio pensando en tu comodidad.
           </p>
         </div>
       </div>
