@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS user(
     id_sex INT NOT NULL,
     phone_number VARCHAR(13) NOT NULL,
     direccion VARCHAR(10) NOT NULL,
+    date_of_birth DATE NOT NULL,
     FOREIGN KEY (id_type_document) REFERENCES category_option(id_category_option), 
     FOREIGN KEY(id_sex) REFERENCES category_option(id_category_option)
 ); 
