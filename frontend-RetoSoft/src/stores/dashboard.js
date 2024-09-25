@@ -7,5 +7,8 @@ export const useDashboardStore = defineStore('dashboard',{
             this.isSidebarOpen = !this.isSidebarOpen
         }
     },
-    persist: true
+    persist: {
+        enabled: true,  // Asegúrate de que la persistencia esté habilitada
+    }
+
 })
