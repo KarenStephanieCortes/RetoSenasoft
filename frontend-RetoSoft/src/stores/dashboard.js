@@ -8,7 +8,7 @@ export const useDashboardStore = defineStore('dashboard',{
         }
     },
     persist: {
-        enabled: true,  // Asegúrate de que la persistencia esté habilitada
+        enabled: true,  
     }
 
 })
