@@ -21,10 +21,10 @@
       </div>
 
       <!-- Contenedor de filtros de búsqueda -->
-      <div class="container-fluid bg-light rounded-4 m-4 p-3" id="buscador">
+      <div class="container bg-light rounded-4 m-4 p-3" id="buscador">
         <div class="row g-2 align-items-end">
           <!-- Filtro por Número de Orden -->
-          <div class="col-md-3">
+          <div class="col-md-2">
             <label for="orderNumber" class="form-label">Número de Orden</label>
             <input
               type="text"
@@ -46,18 +46,25 @@
           </div>
 
           <!-- Ordenar por Fecha Ascendente o Descendente con Íconos -->
-          
+          <div class="col-md-3">
+              <button class="btn btn-primary">Buscar</button>
+          </div>
 
           <!-- Botón de Búsqueda -->
-          
+           <div class="col-md-4">
+              <button class="btn btn-primary">Buscar</button>
+           </div>
+
         </div>
       </div>
     </div>
 
     <!-- Contenedor de órdenes de exámenes -->
     <div class="container-fluid">
-      <OrdenComponent />
-      <GrupoComponent />
+      <div class="row">
+        <div class="col col-md-6"><OrdenComponent /></div>
+        <div class="col col-md-6"><GrupoComponent /></div>
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +90,5 @@ export default {
 #contPrincipal {
   height: 55%;
 }
-#buscador {
-  margin-top: 0%;
-}
+
 </style>

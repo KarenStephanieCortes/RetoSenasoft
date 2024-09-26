@@ -39,3 +39,9 @@ import Navbar from './Navbar.vue';
 import Sidebar from './Sidebar.vue';
 const sidebarStore  = useDashboardStore()
 </script>
+
+<style>
+.grecaptcha-badge {
+  visibility: hidden;
+}
+</style>
