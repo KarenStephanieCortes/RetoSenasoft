@@ -1,20 +1,14 @@
 <template>
-  <div class="card mb-3" style="max-width: 540px">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="../assets/img/probeta.png" class="img-fluid rounded-start" alt="..." />
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-body-secondary">Last updated 3 mins ago</small>
-          </p>
-        </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">N°: 32515467415</h5>
+      <hr />
+      <p class="card-text">Código: AGHA7431110</p>
+      <p class="card-text text-muted">
+        <time datetime="2024-05-22">22/05/2024</time>
+      </p>
+      <div class="text-center">
+        <button class="btn btn-primary">Ver Resultados</button>
       </div>
     </div>
   </div>
@@ -24,5 +18,9 @@
 img {
   width: 100px;
   height: 300%;
+}
+.card{
+  height: 20rem;
+  width: 15rem;
 }
 </style>
