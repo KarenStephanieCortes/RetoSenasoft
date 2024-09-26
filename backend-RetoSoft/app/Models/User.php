@@ -12,17 +12,37 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable, HasApiTokens;
+    protected $fillable = [
+        'id_type_document',
+        'document',
+        'email',
+        'name',
+        'lastname',
+        'id_sex',
+        'phone_number',
+        'direccion',
+        'date_of_birth',
+    ];
+
+    public function typeDocument()
+    {
+        return $this->belongsTo(CategoryOption::class, 'id_type_document', 'id_category_option');
+    }
+
+    public function sex(){
+        return $this->belongsTo(CategoryOption::class, 'id_sex', 'id_category_option');
+    }
+    
+    public function labOrders()
+    {
+        return $this->hasMany(LabOrder::class, 'id_user', 'id');
+    }
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
 
     /**
      * The attributes that should be hidden for serialization.
