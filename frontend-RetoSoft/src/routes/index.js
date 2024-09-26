@@ -10,7 +10,7 @@ export const routes = [
     { 
       path: '/', 
       component: AppLayout,
-      redirect: { name: 'home' },
+      redirect: { name: 'login' },
       children: [
         { 
           path: 'home', 

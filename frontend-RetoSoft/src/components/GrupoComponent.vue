@@ -1,23 +1,18 @@
 <template>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">N°: 32515467415</h5>
-      <hr />
-      <p class="card-text">Código: AGHA7431110</p>
-      <p class="card-text text-muted">
-        <time datetime="2024-05-22">22/05/2024</time>
-      </p>
-      <div class="text-center">
-        <button class="btn btn-primary">Ver Resultados</button>
-      </div>
-    </div>
+  <div class="card" style="width: 18rem; height: auto;">
+  <img src="../assets/img/g_sanguineo.jpg" class="card-img-top img-fluid" alt="...">
+  <div class="card-body text-center">
+    <h5 class="card-title">Química sanguinea</h5>
+    <p class="card-text fz-2">Estas pruebas ayudan a analizar el funcionamiento de órganos vitales como el hígado, los riñones y el páncreas.</p>
+    <a href="#" class="btn btn-primary">Procedimientos</a>
   </div>
+</div>
 </template>
 
 <style>
 img {
   width: 100px;
-  height: 300%;
+  height: 100%;
 }
 .card{
   height: 20rem;
