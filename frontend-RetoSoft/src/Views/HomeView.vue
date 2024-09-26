@@ -1,3 +1,4 @@
+
 <template>
   <div class="row mt-2 h-100 bg-secondary rounded justify-content-center mx-0">
     <div class="container" id="contPrincipal">
@@ -21,40 +22,39 @@
       </div>
 
       <!-- Contenedor de filtros de búsqueda -->
-      <div class="container bg-light rounded-4 m-4 p-3" id="buscador">
-        <div class="row g-2 align-items-end">
-          <!-- Filtro por Número de Orden -->
-          <div class="col-md-2">
-            <label for="orderNumber" class="form-label">Número de Orden</label>
-            <input
-              type="text"
-              id="orderNumber"
-              class="form-control"
-              placeholder="Ingresa el número de orden"
-            />
-          </div>
+      <div class="row bg-light m-4 rounded-4" id="buscador">
+        <!-- Filtro por Número de Orden -->
+        <div class="col-md-3 m-1 mt-2">
+          <label for="orderNumber" class="form-label">Número de Orden</label>
+          <input
+            type="text"
+            id="orderNumber"
+            class="form-control"
+            placeholder="Ingresa el número de orden"
+          />
+        </div>
 
-          <!-- Filtro por Rango de Fechas -->
-          <div class="col-md-3">
-            <label for="startDate" class="form-label">Fecha Inicio</label>
-            <input type="date" id="startDate" class="form-control" />
-          </div>
+        <!-- Filtro por Fecha Inicio -->
+        <div class="col-md-3 m-1 mt-2">
+          <label for="startDate" class="form-label">Fecha Inicio</label>
+          <input type="date" id="startDate" class="form-control" />
+        </div>
 
-          <div class="col-md-3">
-            <label for="endDate" class="form-label">Fecha Fin</label>
-            <input type="date" id="endDate" class="form-control" />
-          </div>
+        <!-- Filtro por Fecha Fin -->
+        <div class="col-md-3 m-1 mt-2">
+          <label for="endDate" class="form-label">Fecha Fin</label>
+          <input type="date" id="endDate" class="form-control" />
+        </div>
 
-          <!-- Ordenar por Fecha Ascendente o Descendente con Íconos -->
-          <div class="col-md-3">
-              <button class="btn btn-primary">Buscar</button>
-          </div>
+        <!-- icon de asc y des -->
+        <div class="col-md-1 d-flex text-center align-items-center mt-2">
+          <i class="fa-solid fa-arrow-down-1-9"></i>
+          <i class="fa-solid fa-arrow-up-9-1"></i>
+        </div>
 
-          <!-- Botón de Búsqueda -->
-           <div class="col-md-4">
-              <button class="btn btn-primary">Buscar</button>
-           </div>
-
+        <!-- Botón de Búsqueda -->
+        <div class="col-md-1 d-flex align-items-center mt-2" id="btnBuscar">
+          <button class="btn btn-primary px-4">Buscar</button>
         </div>
       </div>
     </div>
@@ -65,16 +65,24 @@
         <div class="col col-md-6"><OrdenComponent /></div>
         <div class="col col-md-6"><GrupoComponent /></div>
       </div>
+      <div class="row">
+        <div class="col col-md-6"></div>
+      </div>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <ProcedimientoAcordeonComponent />
+      </div>
     </div>
   </div>
 </template>
 <script>
 import GrupoComponent from "@/components/GrupoComponent.vue";
 import OrdenComponent from "../components/OrdenComponent.vue";
+import ProcedimientoAcordeonComponent from "@/components/ProcedimientoAcordeonComponent.vue";
 export default {
   components: {
     OrdenComponent,
-    GrupoComponent
+    GrupoComponent,
+    ProcedimientoAcordeonComponent,
   },
 };
 </script>
@@ -90,5 +98,11 @@ export default {
 #contPrincipal {
   height: 55%;
 }
-
+#buscador {
+  width: 95%;
+  height: 20%;
+}
+#btnBuscar{
+  width: 10%;
+}
 </style>
