@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid position-relative d-flex p-0  ">
+  <div class="container-fluid position-relative d-flex p-0">
     <!-- Sign In Start -->
     <div class="container-fluid">
       <div
@@ -11,28 +11,47 @@
             <div class="d-flex align-items-center justify-content-between mb-3">
               <a href="index.html" class="">
                 <h3 class="text-primary">
-                  <i class="fa fa-user-edit me-2"></i>DarkPan
+                  <i class="fa fa-user-edit me-2">LabResults</i>
                 </h3>
               </a>
-              <h3>Sign In</h3>
+              <h6>Sign In</h6>
+            </div>
+            <!-- Mostrar error si existe -->
+            <div v-if="errorMessage" class="alert alert-danger" role="alert">
+              {{ errorMessage }}
+            </div>
+            <div class="form-floating mb-3" @submit.prevent="handleLogin">
+              <select
+                class="form-control"
+                id="floatingInput"
+                v-model="selectedOption"
+                value="Tipo de documento"
+              >
+                <option
+                  v-for="opcion in opciones"
+                  :key="opcion.id"
+                  :value="opcion.id"
+                >
+                  {{ opcion.nombre }}
+                </option>
+              </select>
             </div>
             <div class="form-floating mb-3">
               <input
-                type="email"
+                type="documento"
                 class="form-control"
                 id="floatingInput"
-                placeholder="name@example.com"
+                placeholder="1111111"
               />
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInput">Documento</label>
             </div>
             <div class="form-floating mb-4">
               <input
-                type="password"
+                type="date"
                 class="form-control"
-                id="floatingPassword"
-                placeholder="Password"
+                id="floatingInput"
+                required
               />
-              <label for="floatingPassword">Password</label>
             </div>
             <div class="d-flex align-items-center justify-content-between mb-4">
               <div class="form-check">
@@ -61,5 +80,16 @@
   </div>
 </template>
 <script setup>
+import { ref } from "vue";
+import { useAuthStore } from "@/stores";
+import { useRouter } from 'vue-router'; 
 
+const opciones = ref([
+  { id: 0, nombre: "Tipo documento" },
+  { id: 1, nombre: "Cedula" },
+  { id: 2, nombre: "Tarjeta de identidad" },
+  { id: 3, nombre: "Registro de nacimmiento" },
+]);
+
+const selectedOption = ref(0);
 </script>

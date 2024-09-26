@@ -1,7 +1,5 @@
 import axios from 'axios';
-import { useAuthStore } from '@/store'; // Importa el store de Pinia
-import { useSpinnerStore } from '@/store/spinner'; // Importa el store de Pinia para el spinner
-import router from '@/router'; // Importa el router de Vue
+import { useAuthStore } from '@/stores'; 
 
 // Crear una instancia de Axios
 const api = axios.create({
